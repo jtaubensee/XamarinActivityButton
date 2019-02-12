@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ActivityButton.Controls.ActivityButton">
+    <ContentView.Content>
+        <Grid
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Button
+                x:Name="InnerButton"
+                Text="{Binding Text}"
+                Command="{Binding Command}"
+                CommandParameter="{Binding CommandParameter}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="{Binding BackgroundColor}"
+                TextColor="{Binding TextColor}"
+                BorderColor="Transparent"
+                Margin="0" />
+            
+            <ActivityIndicator
+                x:Name="InnerActivityIndicator"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Color="White"
+                Scale="{OnPlatform Default=1, Android=0.7}"
+                Opacity="0"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                IsEnabled="{Binding IsBusy}" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

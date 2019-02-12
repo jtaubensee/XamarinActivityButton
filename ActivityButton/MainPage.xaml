@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ActivityButton"
+    xmlns:controls="clr-namespace:ActivityButton.Controls"
+    x:Class="ActivityButton.MainPage">
+    <StackLayout>
+        <controls:ActivityButton
+            x:Name="Button"
+            Text="Click Here"
+            IsBusy="False"
+            HorizontalOptions="Center"
+            CornerRadius="10"
+            VerticalOptions="CenterAndExpand"
+            Margin="40, 0"
+            BackgroundColor="#1485CC"
+            TextColor="White"
+            Clicked="Handle_Clicked" />
+    </StackLayout>
+</ContentPage>
